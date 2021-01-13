@@ -39,7 +39,7 @@ const IndexPage = props => {
             </motion.h1>
             <Button
               className="bg-btn hero btn-style"
-              href="#"
+              href="#newsletter"
               as={motion.button}
               initial={{ opacity: 0, translateY: 100 }}
               animate={{ opacity: 1, translateY: 0 }}
