@@ -8,3 +8,29 @@
 .btn {
     margin-left: 1rem
 }
+
+.form-title {
+    font-size: 1.5rem;
+    font-weight: bolder
+}
+
+
+.form-content > p.text-secondary {
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.email-input {
+    border-color: #d40d2c;
+    padding: 12px 12px;
+    height: 49px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    font-size: 15px;
+    max-width: 300px;
+}
+
+.email-input:focus {
+    box-shadow: none;
+    border-color: #d40d2c;
+}

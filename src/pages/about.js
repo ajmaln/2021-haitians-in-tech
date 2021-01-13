@@ -36,7 +36,7 @@ const AboutPage = ({ data }) => {
       <SEO title="About" />
       <BgImage />
       <Container className="text-center p-5 about-section" fluid>
-        <p className="about-us">We're just passionate technologists who've come together to provide <br></br>resources, mentorship, and opportunities to people of Haitian descent<br></br>as they pursue careers in technology.</p>
+        <p className="about-us">We're just passionate technologists who've come together to provide resources, mentorship, and opportunities to people of Haitian descent as they pursue careers in technology.</p>
       </Container>
         <h1 className="page-heading p-5">Team</h1>
       <Container className="pb-5 team-container" fluid>

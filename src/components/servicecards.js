@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Card, Row, Col } from "react-bootstrap"
 import "../css/cards.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -8,14 +8,46 @@ import {
   faUsers,
 } from "@fortawesome/free-solid-svg-icons"
 import AnimatedCard from "./animatedCard"
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer"
 
 const ServiceCard = ({ icon, title, description, animationDelay }) => {
+  const controls = useAnimation()
+  const [visible, setVisible] = useState(false);
+  const [ref, inView] = useInView();
+  
+  useEffect(() => {
+    inView && setVisible(true)
+  }, [inView, controls, visible])
+
+  useEffect(() => {
+    visible && controls.start("visible", { delay: (animationDelay || 0.1) + 0.3, duration: 0.5 })
+  }, [visible])
+
   return (
-    <AnimatedCard delay={animationDelay} className="custom-card">
-      <FontAwesomeIcon color="#d40d2c" icon={icon} />
+    <AnimatedCard
+      delay={animationDelay}
+      className="custom-card service-card"
+    >
+      <motion.div
+        className="d-flex justify-content-center align-items-center"
+        style={{
+          borderRadius: "50%",
+          width: 100,
+          height: 100,
+          backgroundColor: "#d40d2c",
+        }}
+        ref={ref}
+        initial="hidden"
+        variants={{ hidden: { scale: 0.0 }, visible: { scale: [0.0, 1.2, 1.0] } }}
+        animate={controls}
+      >
+        <FontAwesomeIcon color="#fff" icon={icon} />
+      </motion.div>
+
       <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Text>{description}</Card.Text>
+        <Card.Title className="font-weight-bold">{title}</Card.Title>
+        <Card.Text className="text-secondary">{description}</Card.Text>
       </Card.Body>
     </AnimatedCard>
   )
@@ -24,7 +56,7 @@ const ServiceCard = ({ icon, title, description, animationDelay }) => {
 const ServiceCards = () => {
   return (
     <div className="service-cards">
-      <Row className="m-5">
+      <Row>
         <Col className="mb-5" xs={12} lg={4}>
           <ServiceCard
             icon={faUsers}

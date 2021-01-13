@@ -1,13 +1,56 @@
 .bg-btn {
-    border-radius: 20px;
+    /* border-radius: 20px; */
+    border: none;
     color: #fff;
-    border-color: #d40d2c;
+    /* border-color: #d40d2c; */
 }
-.bg-btn:hover {
-    color: #000000;
-    border-color: #d40d2c;
+
+.btn-style {
+    padding: 14px 26px;
+    font-size: 14px;
+    border: none;
+    transition: background ease 500ms;
+}
+
+.email-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.btn-style:hover {
+    background-color: #d40d2c;
+    opacity: 0.8;
+}
+
+button.btn.btn-primary.btn-style:active {
+    background-color: #d40d2c;
+    box-shadow: none;
+}
+
+button.btn.btn-primary.btn-style:focus {
+    background-color: #d40d2c;
+    box-shadow: none;
+}
+
+button.btn.btn-primary.btn-style:active:focus {
+    box-shadow: none;
+}
+
+.btn.bg-btn.hero.btn-primary:focus {
+    box-shadow: none;
+}
+
+.bg-btn.hero.btn-primary:active {
     background-color:#d40d2c;
 }
+
+.bg-btn.hero.btn-primary:hover {
+    /* color: #000000;
+    border-color: #d40d2c; */
+    background-color:#f75555;
+}
+
+
 .bg-btn.red {
     color: #d40d2c;
     border-color: #d40d2c;
@@ -23,5 +66,7 @@
     background-color:#d40d2c;
 }
 .bg-btn.hero {
+    border: none;
     background-color:#d40d2c;
 }
+

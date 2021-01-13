@@ -4,11 +4,21 @@
     align-items: center;
 }
 
+.service-card {
+    max-width: 550px;
+    margin: auto;
+}
+
 .custom-card {
     height: 100%;
     padding: 2rem;
-    box-shadow: 0.33333rem 0 1.33333rem rgba(87,87,87,.1);
+    box-shadow: 5px 7px 23px 0 rgba(58,52,82,.16);
+    border: none;
     align-items: center;
+}
+
+.card-text.text-secondary {
+    font-size: 16px;
 }
 
 .card.person-card {

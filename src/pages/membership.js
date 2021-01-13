@@ -25,18 +25,17 @@ const MembershipPage = (props) => (
     <Container className="membership-section" fluid>
     <Container>
       <Row>
-        <Col>
+        <Col md={6} xs={12}>
           <h5 className="text-center member-heading">What do Members get?</h5>
           <Image src={svgIcon} />
         </Col>
-        <Col className="membership-bullet">
+        <Col className="membership-bullet" md={6} xs={12}>
           <div>
             <ul>
-            <li><span aria-label="emoji" role="img">👑</span> Networking in our private online community.</li>
-            <li><span aria-label="emoji" role="img">📺</span> All access pass to weekly webinars.</li>
-            <li><span aria-label="emoji" role="img">🏆️</span> Weekly goal setting and monthly challenges to keep you motivated all year long.</li>
-            <li><span aria-label="emoji" role="img">🎁</span> Curated perks including discounted conferences, coding classes, and more.</li>
-            <br></br>
+            <li style={{ fontSize: 22 }}><span aria-label="emoji" role="img">👑</span> Networking in our private online community.</li>
+            <li style={{ fontSize: 22 }}><span aria-label="emoji" role="img">📺</span> All access pass to weekly webinars.</li>
+            <li style={{ fontSize: 22 }}><span aria-label="emoji" role="img">🏆️</span> Weekly goal setting and monthly challenges to keep you motivated all year long.</li>
+            <li style={{ fontSize: 22 }}><span aria-label="emoji" role="img">🎁</span> Curated perks including discounted conferences, coding classes, and more.</li>
             <br></br>
             <h5 className="pb-1 font-weight-bold">...All for less than the price of one conference.</h5>
             </ul>

@@ -33,11 +33,12 @@ const IndexPage = props => {
               animate={{ translateY: 0, opacity: 1 }}
               initial={{ translateY: -100, opacity: 0 }}
               transition={{ duration: 0.5 }}
+              className="font-weight-bolder"
             >
               L'union fait la force
             </motion.h1>
             <Button
-              className="bg-btn hero"
+              className="bg-btn hero btn-style"
               href="#"
               as={motion.button}
               initial={{ opacity: 0, translateY: 100 }}
@@ -51,7 +52,7 @@ const IndexPage = props => {
       </BackgroundImage>
       <Container className="who-we-are pt-5" fluid>
         <motion.h1
-          className="p-3"
+          className="p-3 font-weight-bolder"
           ref={ref}
           initial="hidden"
           variants={{
@@ -75,7 +76,7 @@ const IndexPage = props => {
           <h1 className="form-title">
             Subscribe to our <span className="red">newsletter</span>
           </h1>
-          <p className="form-text pt-2">
+          <p className="form-text pt-2 text-secondary">
             Get the latest job openings, upcoming events, valuable resources
             <br></br>and opportunities in your inbox bi-weekly!
           </p>
@@ -87,6 +88,7 @@ const IndexPage = props => {
             method="POST"
             data-netlify="true"
             id="newsletter"
+            className="d-flex justify-content-center align-items-center"
           >
             <input type="hidden" name="form-name" value="newsletter" />
             <p class="hidden" netlify>
@@ -95,16 +97,17 @@ const IndexPage = props => {
                 <input name="bot-field" name="email" value="email" />
               </label>
             </p>
-            <Form.Group controlId="formGroupEmail">
+            <Form.Group controlId="formGroupEmail" className="m-0">
               <Form.Control
                 type="email"
                 placeholder="Enter email"
+                className="email-input"
                 name="email"
               />
             </Form.Group>
             <Button
               value="register"
-              className="bg-btn form-button"
+              className="form-button btn-style m-0 font-weight-bolder email-button"
               type="submit"
             >
               Submit
