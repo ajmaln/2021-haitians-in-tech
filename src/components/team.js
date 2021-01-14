@@ -9,8 +9,8 @@ const TeamCards = ({ imageData, name, title, linkedin, portfolio, animationDelay
     <AnimatedCard className="team-cards custom-card" delay={animationDelay}>
     <Img fluid={imageData} alt={name} className="rounded-circle" />
       <Card.Body className="team-card-body">
-        <h5>{name}</h5>
-        <p className="text-secondary" style={{ fontSize: 14 }}>{title}</p>
+        <h3 style={{ marginBottom: "0.5rem" }}>{name}</h3>
+        <p className="text-secondary">{title}</p>
         <p>
           <a href={`${linkedin}`}>Linkedin</a>
         </p>

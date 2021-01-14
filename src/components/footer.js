@@ -12,10 +12,10 @@ const Footer = () => (
             <Row>
                 <Col>
                     <div><Logo /></div>
-                    <h5 className="font-weight-bold">HaitiansinTech.com</h5>
+                    <h4 className="font-weight-bold">HaitiansinTech.com</h4>
                 </Col>
                 <Col>
-                    <h5 className="title font-weight-bold">Contact Us</h5>
+                    <h3 className="title font-weight-bold">Contact Us</h3>
                     <ul className="list-unstyled text-secondary" style={{ fontSize: 16 }}>
                         <li>
                         Press/Partnerships: <a className="footer-links" href="mailto:team@haitiansintech.com">team@haitiansintech.com</a>
@@ -35,7 +35,7 @@ const Footer = () => (
                     </ul>
                 </Col>
                 <Col>
-                    <h5 className="title font-weight-bold">Connect with us</h5>
+                    <h3 className="title font-weight-bold">Connect with us</h3>
                     <div className="social-media">
                         <div>
                             <a rel="noreferrer" target="_blank" href="https://github.com/haitiansintech">
