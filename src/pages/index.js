@@ -94,7 +94,7 @@ const IndexPage = props => {
             <p class="hidden" netlify>
               <label>
                 Don’t fill this out if you're human:{" "}
-                <input name="bot-field" name="email" value="email" />
+                <input name="bot-field" />
               </label>
             </p>
             <Form.Group controlId="formGroupEmail" className="m-0">

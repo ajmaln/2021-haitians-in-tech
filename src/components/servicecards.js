@@ -18,11 +18,11 @@ const ServiceCard = ({ icon, title, description, animationDelay }) => {
   
   useEffect(() => {
     inView && setVisible(true)
-  }, [inView, controls, visible])
+  }, [inView, setVisible])
 
   useEffect(() => {
     visible && controls.start("visible", { delay: (animationDelay || 0.1) + 0.3, duration: 0.5 })
-  }, [visible])
+  }, [visible, animationDelay, controls])
 
   return (
     <AnimatedCard
